@@ -1,0 +1,31 @@
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: #fffeff;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 1rem;
+}
+
+.switch {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#dark .switch {
+    background: url('/public/assets/icon-sun.svg') no-repeat;
+}
+
+#light .switch {
+    background: url('/public/assets/icon-moon.svg') no-repeat;
+}

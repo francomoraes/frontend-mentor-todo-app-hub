@@ -1,0 +1,42 @@
+.createTask-container {
+    width: 100%;
+    height: 60px;
+    background-color: hsl(235, 24%, 19%);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.checkButton {
+    border: 1px solid hsl(237, 14%, 26%);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    margin: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkButton.checked {
+    background: linear-gradient(
+        to bottom right,
+        hsl(192, 100%, 67%),
+        hsl(280, 87%, 65%)
+    );
+}
+
+.createTask-container input {
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%;
+    height: 100%;
+    color: hsl(234, 39%, 85%);
+    &:focus {
+        outline: none;
+    }
+}
