@@ -1,0 +1,50 @@
+#dark {
+    .task-item-container {
+        background-color: hsl(235, 24%, 19%);
+        border-bottom: 1px solid hsl(233, 14%, 35%);
+
+        span {
+            color: hsl(234, 39%, 85%);
+        }
+        s {
+            color: hsl(234, 11%, 52%);
+        }
+    }
+}
+
+#light {
+    .task-item-container {
+        background-color: hsl(236, 33%, 92%);
+        border-bottom: 1px solid hsl(233, 11%, 84%);
+
+        span {
+            color: hsl(235, 21%, 11%);
+        }
+        s {
+            color: hsl(236, 9%, 61%);
+        }
+    }
+}
+
+.task-item-container {
+    align-items: center;
+    display: flex;
+    height: 60px;
+    width: 100%;
+
+    span,
+    s {
+        background-color: transparent;
+        border: none;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        height: 100%;
+        width: 100%;
+        &:focus {
+            outline: none;
+        }
+        display: flex;
+        align-items: center;
+    }
+}

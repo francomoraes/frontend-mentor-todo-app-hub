@@ -1,5 +1,5 @@
 import { useTheme } from '../../context/ThemeContext';
-import './styles.css';
+import './Header.styles.css';
 
 const Header = () => {
     const { theme, setTheme }: any = useTheme();

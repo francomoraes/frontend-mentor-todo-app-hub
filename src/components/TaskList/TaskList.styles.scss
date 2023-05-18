@@ -1,0 +1,72 @@
+#dark {
+    .task-list-footer {
+        background-color: hsl(235, 24%, 19%);
+
+        p {
+            color: hsl(236, 9%, 61%);
+        }
+        button {
+            color: hsl(236, 9%, 61%);
+            &:hover {
+                color: #ccc;
+            }
+            &:focus {
+                color: hsl(220, 98%, 61%);
+                outline: none;
+            }
+        }
+        .active {
+            color: hsl(220, 98%, 61%);
+        }
+    }
+}
+
+#light {
+    .task-list-footer {
+        background-color: hsl(236, 33%, 92%);
+
+        p {
+            color: hsl(236, 9%, 61%);
+        }
+        button {
+            color: hsl(236, 9%, 61%);
+            &:hover {
+                color: #ccc;
+            }
+            &:focus {
+                color: hsl(220, 98%, 61%);
+                outline: none;
+            }
+        }
+        .active {
+            color: hsl(220, 98%, 61%);
+        }
+    }
+}
+
+.task-list-footer {
+    display: flex;
+    align-items: center;
+    border-radius: 0 0 4px 4px;
+    min-height: 50px;
+    p {
+        margin-left: 10px;
+        margin-right: auto;
+        font-size: 12px;
+        letter-spacing: 0.1em;
+    }
+    button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        font-size: 12px;
+        font-weight: 600;
+        margin: 0 5px;
+    }
+
+    button:last-child {
+        margin-right: 10px;
+        margin-left: auto;
+    }
+}
