@@ -71,18 +71,15 @@ const TaskList = () => {
 
     return (
         <div>
-            {finalTaskList.map(
-                (task: any) => (
-                    console.log('task', task),
-                    (
-                        <div key={task.id}>
-                            <TaskItem task={task} />
-                        </div>
-                    )
-                )
-            )}
+            <ul>
+                {finalTaskList.map((task: any, index: number) => (
+                    <li key={task.id}>
+                        <TaskItem task={task} />
+                    </li>
+                ))}
+            </ul>
             <footer className="task-list-footer">
-                <p>{activeTaskList.length} items left</p>
+                <p className="items-left">{activeTaskList.length} items left</p>
                 <button id="btn-all" onClick={handleShowAll}>
                     All
                 </button>
@@ -92,7 +89,12 @@ const TaskList = () => {
                 <button id="btn-completed" onClick={handleShowCompleted}>
                     Completed
                 </button>
-                <button onClick={handleClearCompleted}>Clear Completed</button>
+                <button
+                    className="clear-completed"
+                    onClick={handleClearCompleted}
+                >
+                    Clear Completed
+                </button>
             </footer>
         </div>
     );

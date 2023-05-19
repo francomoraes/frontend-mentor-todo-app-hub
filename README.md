@@ -1,17 +1,18 @@
-# Frontend Mentor - Expenses chart component solution
+# Frontend Mentor - Todo App
 
-This is a solution to the [Expenses chart component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Challenge Hub Todo App](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW/hub).
+Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
-- [Frontend Mentor - Expenses chart component solution](#frontend-mentor---expenses-chart-component-solution)
-  - [Table of contents](#table-of-contents)
-  - [Overview](#overview)
-    - [The challenge](#the-challenge)
-    - [Links](#links)
-    - [Screenshot](#screenshot)
-    - [Built with](#built-with)
-  - [Author](#author)
+-   [Frontend Mentor - Todo App](#frontend-mentor---todo-app)
+    -   [Table of contents](#table-of-contents)
+    -   [Overview](#overview)
+        -   [The challenge](#the-challenge)
+        -   [Links](#links)
+        -   [Screenshots](#screenshots)
+        -   [Built with](#built-with)
+    -   [Author](#author)
 
 ## Overview
 
@@ -19,33 +20,32 @@ This is a solution to the [Expenses chart component challenge on Frontend Mentor
 
 Users should be able to:
 
--   View the bar chart and hover over the individual bars to see the correct amounts for each day
--   See the current day’s bar highlighted in a different colour to the other bars
--   View the optimal layout for the content depending on their device’s screen size
+-   View the optimal layout for the app depending on their device's screen size
 -   See hover states for all interactive elements on the page
--   **Bonus**: Use the JSON data file provided to dynamically size the bars on the chart
+-   Add new todos to the list
+-   Mark todos as complete
+-   Delete todos from the list
+-   Filter by all/active/complete todos
+-   Clear all completed todos
+-   Toggle light and dark mode
+-   **Bonus**: Drag and drop to reorder items on the list (not implemented)
 
 ### Links
 
 -   [Solution URL](frontend-mentor-todo-app-hub.vercel.app)
 
-### Screenshot
+### Screenshots
 
-Desktop 1440px, with hover on current day
-![](./public/Screenshots/Screenshot-1440-px-hover.png)
-
-Mobile 375px, with hover not-current day </br>
-![](./public/Screenshots/Screenshot-Mobile-hover.png)
+<img src="./public/assets/screenshot.png" alt="screenshot" />
+<img src="./public/assets/screenshot(1).png" alt="screenshot" />
+    <img src="./public/assets/screenshot(2).png" alt="screenshot" style="width: calc(49% - 10px); margin: 5px" />
+    <img src="./public/assets/screenshot(3).png" alt="screenshot" style="width: calc(49% - 10px); margin: 5px"/>
 
 ### Built with
 
--   Typescript
--   CSS custom properties
--   Flexbox
--   [React](https://reactjs.org/) - JS library
--   [Next.js](https://nextjs.org/) - React framework
--   [Styled Components](https://styled-components.com/) - For styles
--   [Echarts](https://echarts.apache.org/) - Visualization Library
+-   [Typescript](https://www.typescriptlang.org/)
+-   [Sass](https://sass-lang.com/)
+-   [React](https://reactjs.org/)
 
 ## Author
 
