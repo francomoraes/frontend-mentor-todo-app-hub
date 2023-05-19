@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Solution Link
 
--   [Solution URL](frontend-mentor-todo-app-hub.vercel.app)
+-   [Solution URL](https://frontend-mentor-todo-app-hub.vercel.app/)
 
 ### Screenshots
 
