@@ -9,7 +9,7 @@ Frontend Mentor challenges help you improve your coding skills by building reali
     -   [Table of contents](#table-of-contents)
     -   [Overview](#overview)
         -   [The challenge](#the-challenge)
-        -   [Links](#links)
+        -   [Solution Link](#solution-link)
         -   [Screenshots](#screenshots)
         -   [Built with](#built-with)
     -   [Author](#author)
@@ -30,7 +30,7 @@ Users should be able to:
 -   Toggle light and dark mode
 -   **Bonus**: Drag and drop to reorder items on the list (not implemented)
 
-### Links
+### Solution Link
 
 -   [Solution URL](frontend-mentor-todo-app-hub.vercel.app)
 
