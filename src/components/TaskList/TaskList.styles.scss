@@ -5,6 +5,10 @@ ul {
         border-radius: 4px 4px 0 0;
     }
     margin: 0;
+
+    li {
+        cursor: pointer;
+    }
 }
 
 #dark {
@@ -53,6 +57,11 @@ ul {
     }
 }
 
+.draggable .over {
+    text-decoration: line-through;
+    color: hsl(233, 11%, 84%);
+}
+
 .task-list-footer {
     display: flex;
     align-items: center;
@@ -99,5 +108,35 @@ ul {
     }
     li:last-child {
         border-radius: 0 0 4px 4px;
+    }
+}
+
+.placeholder {
+    align-items: center;
+    display: flex;
+    height: 40px;
+    width: calc(100% - 20px);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    padding-left: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    justify-content: center;
+}
+
+#dark {
+    .placeholder {
+        background-color: hsla(235, 24%, 19%, 0.5);
+        border-bottom: 1px solid hsl(233, 14%, 35%);
+        color: hsl(234, 39%, 85%);
+    }
+}
+
+#light {
+    .placeholder {
+        background-color: hsl(236, 33%, 92%, 0.5);
+        border-bottom: 1px solid hsl(233, 11%, 84%);
+        color: hsl(235, 21%, 11%);
     }
 }

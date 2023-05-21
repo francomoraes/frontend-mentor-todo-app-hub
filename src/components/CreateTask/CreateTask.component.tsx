@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './CreateTask.styles.scss';
-import { ReactComponent as CheckIcon } from '/public/assets/icon-check.svg';
+// import { ReactComponent as CheckIcon } from '/public/assets/icon-check.svg';
 import { useTaskList } from '../../context/TaskListContext';
 
 const CreateTask = () => {
@@ -38,12 +38,12 @@ const CreateTask = () => {
 
     return (
         <div className="createTask-container">
-            <button
+            {/* <button
                 onClick={handleClick}
                 className={checked ? 'checkButton checked' : 'checkButton'}
             >
                 {checked && <CheckIcon style={{ width: '100%' }} />}
-            </button>
+            </button> */}
             <input
                 type="text"
                 placeholder="Create a new todo..."

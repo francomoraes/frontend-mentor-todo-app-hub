@@ -10,21 +10,6 @@
             color: hsl(234, 11%, 52%);
         }
     }
-
-    li:first-child .task-item-container {
-        border-radius: 4px 4px 0 0;
-    }
-
-    li:last-child .task-item-container {
-        // border-radius: 0 0 4px 4px;
-        border-bottom: none;
-    }
-
-    @media (max-width: 600px) {
-        li:last-child .task-item-container {
-            border-radius: 0 0 4px 4px;
-        }
-    }
 }
 
 #light {
@@ -38,6 +23,21 @@
         s {
             color: hsl(236, 9%, 61%);
         }
+    }
+}
+
+li:first-child .task-item-container {
+    border-radius: 4px 4px 0 0;
+}
+
+li:last-child .task-item-container {
+    // border-radius: 0 0 4px 4px;
+    border-bottom: none;
+}
+
+@media (max-width: 600px) {
+    li:last-child .task-item-container {
+        border-radius: 0 0 4px 4px;
     }
 }
 
