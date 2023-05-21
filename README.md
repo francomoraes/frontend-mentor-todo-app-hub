@@ -30,6 +30,7 @@ Users should be able to:
 -   Toggle light and dark mode
 -   **Bonus**: Drag and drop to reorder items on the list
     -   The drag and drop feature was developed without relying on external libraries, as it appeared to offer a more straightforward solution.
+    -   However, it is currently not functional in the mobile version.
 
 ### Solution Link
 
