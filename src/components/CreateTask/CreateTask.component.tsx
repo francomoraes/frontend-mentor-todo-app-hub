@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './CreateTask.styles.scss';
-import { ReactComponent as CheckIcon } from '/public/assets/icon-check.svg';
+// import { ReactComponent as CheckIcon } from '/public/assets/icon-check.svg';
 import { useTaskList } from '../../context/TaskListContext';
 
 const CreateTask = () => {
