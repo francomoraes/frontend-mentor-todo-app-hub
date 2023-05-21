@@ -38,12 +38,12 @@ const CreateTask = () => {
 
     return (
         <div className="createTask-container">
-            <button
+            {/* <button
                 onClick={handleClick}
                 className={checked ? 'checkButton checked' : 'checkButton'}
             >
                 {checked && <CheckIcon style={{ width: '100%' }} />}
-            </button>
+            </button> */}
             <input
                 type="text"
                 placeholder="Create a new todo..."

@@ -28,7 +28,8 @@ Users should be able to:
 -   Filter by all/active/complete todos
 -   Clear all completed todos
 -   Toggle light and dark mode
--   **Bonus**: Drag and drop to reorder items on the list (not implemented)
+-   **Bonus**: Drag and drop to reorder items on the list
+    -   The drag and drop feature was developed without relying on external libraries, as it appeared to offer a more straightforward solution.
 
 ### Solution Link
 
