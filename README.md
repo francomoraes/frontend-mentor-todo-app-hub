@@ -29,8 +29,10 @@ Users should be able to:
 -   Clear all completed todos
 -   Toggle light and dark mode
 -   **Bonus**: Drag and drop to reorder items on the list
-    -   The drag and drop feature was developed without relying on external libraries, as it appeared to offer a more straightforward solution.
-    -   However, it is currently not functional in the mobile version.
+    -   The first solution was developed without relying on external libraries, as it appeared to offer a more straightforward solution.
+    -   However, it was not functional in the mobile version.
+    -   So ended up using react-beautiful-dndm which is now working fine in both mobile and desktop layouts.
+    -   Had really good help from [Colby Fayock](https://github.com/colbyfayock), with [this video](https://www.youtube.com/watch?v=aYZRRyukuIw&t=42s) and [this article](https://www.freecodecamp.org/news/how-to-add-drag-and-drop-in-react-with-react-beautiful-dnd/)
 
 ### Solution Link
 
@@ -48,6 +50,7 @@ Users should be able to:
 -   [Typescript](https://www.typescriptlang.org/)
 -   [Sass](https://sass-lang.com/)
 -   [React](https://reactjs.org/)
+-   [React-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd)
 
 ## Author
 

@@ -19,15 +19,15 @@ const CreateTask = () => {
         setTaskList([
             ...taskList,
             {
-                id: taskList.length + 1,
+                id: inputText.substring(0, 6) + taskList.length,
                 task: inputText,
                 completed: false
             }
         ]);
         setInputText('');
-        setTimeout(() => {
-            setChecked(false);
-        }, 500);
+        // setTimeout(() => {
+        //     setChecked(false);
+        // }, 500);
     };
 
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
