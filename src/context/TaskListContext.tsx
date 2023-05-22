@@ -12,7 +12,7 @@ const TaskListContextProvider: React.FC<Props> = ({ children }) => {
         : [];
 
     const [taskList, setTaskList] = useState<
-        { id: number; task: string; completed: boolean; isDragging: boolean }[]
+        { id: string; task: string; completed: boolean; isDragging: boolean }[]
     >([...tasks]);
 
     return (

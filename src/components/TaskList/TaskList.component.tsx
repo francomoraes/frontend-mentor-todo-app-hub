@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import './TaskList.styles.scss';
 import TaskItem from '../TaskItem/TaskItem.component';
 import { useTaskList } from '../../context/TaskListContext';
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
 const TaskList = () => {
     const { taskList, setTaskList }: any = useTaskList();
@@ -63,83 +64,50 @@ const TaskList = () => {
         handleActiveClass('btn-all');
     }, []);
 
-    //drag and drop - start
-    const dragOrigin = useRef<number | null>();
-    const dragTarget = useRef<number | null>();
+    function handleDragEnd(result: any) {
+        if (!result.destination) return;
 
-    function onDragStart(index: number) {
-        dragOrigin.current = index;
+        const items = Array.from(finalTaskList);
+        const [reorderedItem] = items.splice(result.source.index, 1);
+        items.splice(result.destination.index, 0, reorderedItem);
+
+        setFinalTaskList(items);
+        setTaskList(items);
     }
-
-    function onDragEnter(index: number) {
-        dragTarget.current = index;
-
-        const tempList = [...taskList];
-
-        const newList = tempList.map((item) => {
-            return {
-                id: item.id,
-                task: item.task,
-                completed: item.completed,
-                isDragging: false
-            };
-        });
-
-        newList[index].isDragging = true;
-
-        setTaskList(newList);
-    }
-
-    function onDragEnd() {
-        const tempList = [...taskList];
-
-        const itemDragging = tempList[dragOrigin.current!];
-
-        tempList.splice(dragOrigin.current!, 1);
-        tempList.splice(dragTarget.current!, 0, itemDragging);
-
-        dragOrigin.current = null;
-        dragTarget.current = null;
-
-        const newList = tempList.map((item) => {
-            return {
-                id: item.id,
-                task: item.task,
-                completed: item.completed,
-                isDragging: false
-            };
-        });
-
-        setTaskList(newList);
-    }
-    //drag and drop - end
 
     return (
         <div>
-            <ul draggable>
-                {[...finalTaskList].map((task: any, index: number) => (
-                    <>
-                        {task.isDragging &&
-                            dragOrigin.current! > dragTarget.current! && (
-                                <li className="placeholder">Drop here</li>
-                            )}
-                        <li
-                            key={task.id}
-                            className="draggable"
-                            draggable
-                            onDragStart={() => onDragStart(index)}
-                            onDragEnter={() => onDragEnter(index)}
-                            onDragEnd={() => onDragEnd()}
+            <DragDropContext onDragEnd={handleDragEnd}>
+                <Droppable droppableId="task-list">
+                    {(provided) => (
+                        <ul
+                            {...provided.droppableProps}
+                            ref={provided.innerRef}
                         >
-                            <TaskItem task={task} />
-                        </li>
-                        {task.isDragging &&
-                            dragOrigin.current! < dragTarget.current! && (
-                                <li className="placeholder">Drop here</li>
+                            {[...finalTaskList].map(
+                                (task: any, index: number) => (
+                                    <Draggable
+                                        key={task.id}
+                                        draggableId={task.id}
+                                        index={index}
+                                    >
+                                        {(provided) => (
+                                            <li
+                                                {...provided.draggableProps}
+                                                {...provided.dragHandleProps}
+                                                ref={provided.innerRef}
+                                            >
+                                                <TaskItem task={task} />
+                                            </li>
+                                        )}
+                                    </Draggable>
+                                )
                             )}
-                    </>
-                ))}
-            </ul>
+                            {provided.placeholder}
+                        </ul>
+                    )}
+                </Droppable>
+            </DragDropContext>
             <footer className="task-list-footer">
                 <p className="items-left">{activeTaskList.length} items left</p>
                 <button id="btn-all" onClick={handleShowAll}>
